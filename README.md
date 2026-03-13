@@ -12,7 +12,6 @@ To write a python program to perform stop and wait protocol
 ```
 CLINENT:
 import socket
-
 s = socket.socket()
 s.connect(('localhost', 8000))
 
@@ -24,7 +23,6 @@ for i in range(n):
 
     ack = s.recv(1024).decode()
     print("Received:", ack)
-
 s.close()
 ```
 ~~~
@@ -47,17 +45,12 @@ while True:
 
     print("Frame received:", data)
     conn.send("ACK".encode())
-
 conn.close()
 ~~~
-
 ## OUTPUT
-
 CLINENT:
 ![alt text](CLINENT.png)
 SERVER:
 ![alt text](SERVER.png)
-
-
 ## RESULT
 Thus, python program to perform stop and wait protocol was successfully executed.
